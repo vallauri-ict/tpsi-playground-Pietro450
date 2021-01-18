@@ -2,46 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
-    <link rel="stylesheet" href="stile.css">
-    <title>Utenti</title>
+    <title>RandomUser</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquary.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/script.js"></script>
 </head>
-<body>
-    <form style="border:1px solid black; padding: 10px; width: 500px;background-color:white; color:black">
-        <label for="numeroUtenti">NUMERO UTENTI DA GENERARE</label>
-        <input type="text" id="numeroUtenti" name="num" oninput="testoCambiato()"/>
-        <br />
-        <div id="filtriNazionalita">
-            <label for="abilitaFiltroNazionalita">NAZOINALITA'</label>
-            <input id="abilitaFiltroNazionalita" type="checkbox"  value="nat" class="checkBoxFiltri" onchange="cambiaStatoCheck(value,this)"/>
+<body onload="nationality()">
+    </br>
+    <div class="wrapper">
+        <h1 align="center">Random User-Generator</h1>
+        <div align="center" class="divGenera">
+            <button onclick="genera()">Genera</button>
+            <input type="number" name="Nutenti" id="txtUtenti"></input>
+            <select id="TendinaGender">
+                <option>male</option>
+                <option>female</option>
+            </select>
+            <select id="TendinaNationality"></select>
         </div>
-        <div id="filtriSesso">
-            <label for="abilitaFiltroSesso">GENERE</label>
-            <input id="abilitaFiltroSesso" type="checkbox"  value="gender" class="checkBoxFiltri" onchange="cambiaStatoCheck(value,this)"/>
+        </br>
+        <div align="center">
+            <h3 id="1"></h3>
+            <img id="imgUtente"></img>
+            </br>
+            </br>
+            <button class="indice" id="Nome" onclick="Vedi(this)">Nome</button>
+            <button class="indice" id="Indirizzo" onclick="Vedi(this)">Indirizzo</button>
+            <button class="indice" id="Mail" onclick="Vedi(this)">Mail</button>
+            <button class="indice" id="Telefono" onclick="Vedi(this)">Telefono</button>
         </div>
-        <div id="filtriPassword">
-            <label for="abilitaFiltroPassword">PASSWORD</label>
-            <input id="abilitaFiltroPassword" type="checkbox"  value="password" class="checkBoxFiltri" onchange="cambiaStatoCheck(value,this)"/>
+        </br>
+        </br>
+        <div align="center">
+            <button onclick="avanti()">Avanti</button>
+            <button onclick="indietro()">Indietro</button>
         </div>
-    </form>
-    </br>
-    </br>
-    <button onclick="generateUsers()">GENERA UTENTI</button>
-    </br>
-    </br>
-    <div id="userGenerati" style="border:1px solid black; padding: 10px; width: 500px;background-color:white; color:black ">
-            <img src="" class="generati"/>
-            <h3 id="Name" class="generati">NOME: </h3>
-            <h3 id="Surname" class="generati" >COGNOME: </h3>
-            <p id="Gender" class="generati">GENERE: </p>
-            <p id="Nationality" class="generati">NAZOINALITA': </p>
-            <p id="Email" class="generati" >MAIL: </p>
-            <p id="Password" class="generati" >PASSWORD: </p>
     </div>
-    </br>
-    </br>
-    <button value="1" onclick="cambiaIndice(value)">AVANTI</button> <button value="-1" onclick="cambiaIndice(value)">INDIETRO</button>
-    <p id="labelContatore">elemento 0 </p><p id="labelMax">di 0 </p>
 </body>
 </html>
