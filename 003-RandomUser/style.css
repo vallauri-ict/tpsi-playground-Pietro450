@@ -1,0 +1,32 @@
+html{
+     height: 90%;
+     background-color: white;
+ }
+
+body{
+    height: 90%;
+    margin: 0px;
+    background-color: white;
+    overflow: hidden;
+}
+.wrapper{
+    width:550px;
+    height: 600px;
+    padding:20px;
+    margin:20px auto;
+    border: 5px solid darkblue;
+    overflow:auto;
+    color: darkblue;
+    background-color: lightgreen;
+}
+
+h1{
+    margin:25px auto;
+    text-align:center
+}
+
+.imgUtente{
+    width:16px;
+    height:16px;
+    margin-left:4px;
+}
